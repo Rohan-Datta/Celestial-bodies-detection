@@ -101,6 +101,7 @@ JPEG_DATA_TENSOR_NAME = 'DecodeJpeg/contents:0'
 RESIZED_INPUT_TENSOR_NAME = 'ResizeBilinear:0'
 MAX_NUM_IMAGES_PER_CLASS = 2 ** 27 - 1  # ~134M
 
+tf.compat.v1.disable_eager_execution()
 
 def create_image_lists(image_dir, testing_percentage, validation_percentage):
   """Builds a list of training images from the file system.
